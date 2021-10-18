@@ -21,12 +21,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       {
         "name": "mocheong",
         "reference": "workspace:."
+      },
+      {
+        "name": "client",
+        "reference": "workspace:packages/client"
+      },
+      {
+        "name": "server",
+        "reference": "workspace:packages/server"
       }
     ],
     "enableTopLevelFallback": true,
     "ignorePatternData": "(^(?:\\.yarn\\/sdks(?:\\/(?!\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)|$))$)",
     "fallbackExclusionList": [
-      ["mocheong", ["workspace:."]]
+      ["client", ["workspace:packages/client"]],
+      ["mocheong", ["workspace:."]],
+      ["server", ["workspace:packages/server"]]
     ],
     "fallbackPool": [
     ],
@@ -207,6 +217,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["string-width", "npm:4.2.3"]
           ],
           "linkType": "HARD",
+        }]
+      ]],
+      ["client", [
+        ["workspace:packages/client", {
+          "packageLocation": "./packages/client/",
+          "packageDependencies": [
+            ["client", "workspace:packages/client"]
+          ],
+          "linkType": "SOFT",
         }]
       ]],
       ["color-convert", [
@@ -798,6 +817,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["server", [
+        ["workspace:packages/server", {
+          "packageLocation": "./packages/server/",
+          "packageDependencies": [
+            ["server", "workspace:packages/server"],
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
       ["shebang-command", [
         ["npm:2.0.0", {
           "packageLocation": "./.yarn/cache/shebang-command-npm-2.0.0-eb2b01921d-6b52fe8727.zip/node_modules/shebang-command/",
@@ -951,6 +980,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/type-fest-npm-0.21.3-5ff2a9c6fd-e6b32a3b38.zip/node_modules/type-fest/",
           "packageDependencies": [
             ["type-fest", "npm:0.21.3"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["typescript", [
+        ["patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b", {
+          "packageLocation": "./.yarn/cache/typescript-patch-29eb8bf885-c97c33903f.zip/node_modules/typescript/",
+          "packageDependencies": [
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"]
           ],
           "linkType": "HARD",
         }]
