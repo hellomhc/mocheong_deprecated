@@ -1,0 +1,15 @@
+# Ignore artifacts:
+build
+coverage
+.prettierrc
+.prettierignore
+.lintstagedrc
+nodemon.json
+tsconfig.json
+package.json
+yarn.lock
+yarn-error.log
+.gitignore
+.env
+.env.development
+.pnp.cjs
