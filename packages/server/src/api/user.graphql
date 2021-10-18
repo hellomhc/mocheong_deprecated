@@ -1,0 +1,21 @@
+"""
+A user is an individual's account on Mocheong
+"""
+type User implements Node {
+  """
+  ID of the user.
+  """
+  id: ID!
+}
+
+type Query {
+  """
+  Fetches a user given its ID.
+  """
+  user(
+    """
+    ID of the user.
+    """
+    id: ID!
+  ): User
+}
