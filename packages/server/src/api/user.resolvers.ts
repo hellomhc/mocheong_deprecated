@@ -1,4 +1,6 @@
-const resolvers = {
+import {Resolvers} from '../types/api';
+
+const resolvers: Resolvers = {
   Query: {
     user: () => {
       return {

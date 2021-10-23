@@ -1,0 +1,18 @@
+generates:
+  src/types/api.ts:
+    schema:
+      - src/api/*.graphql
+    plugins:
+      - typescript
+      - typescript-resolvers
+    config:
+      contextType: src/types/apollo#Context
+      declarationKind:
+        type: interface
+        input: interface
+      namingConvention:
+        enumValues: upper-case#upperCase
+      scalars:
+        JSON: '{[key: string]: any}'
+        DateTime: Date
+        ID: string | number
