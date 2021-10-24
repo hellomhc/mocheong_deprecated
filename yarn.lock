@@ -1264,6 +1264,34 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@prisma/client@npm:^3.3.0":
+  version: 3.3.0
+  resolution: "@prisma/client@npm:3.3.0"
+  dependencies:
+    "@prisma/engines-version": 3.3.0-30.33838b0f78f1fe9052cf9a00e9761c9dc097a63c
+  peerDependencies:
+    prisma: "*"
+  peerDependenciesMeta:
+    prisma:
+      optional: true
+  checksum: ff6e489f5abc2382b25776235e84ffaf8aca0ff8c2ec1eef62cc1e6bdc6c740666fb117cfd70fc75e723a626ee63045230651f29dfd6dbf6be39445efcb769b2
+  languageName: node
+  linkType: hard
+
+"@prisma/engines-version@npm:3.3.0-30.33838b0f78f1fe9052cf9a00e9761c9dc097a63c":
+  version: 3.3.0-30.33838b0f78f1fe9052cf9a00e9761c9dc097a63c
+  resolution: "@prisma/engines-version@npm:3.3.0-30.33838b0f78f1fe9052cf9a00e9761c9dc097a63c"
+  checksum: df71f40c9c025ce67ccc0a0ae0fe75edd215a28f02278f5ac80a8eaae0cdec46958a16833ffddd9b447825f13968e519d911ece848b01c9280f67d9408ebd1c3
+  languageName: node
+  linkType: hard
+
+"@prisma/engines@npm:3.3.0-30.33838b0f78f1fe9052cf9a00e9761c9dc097a63c":
+  version: 3.3.0-30.33838b0f78f1fe9052cf9a00e9761c9dc097a63c
+  resolution: "@prisma/engines@npm:3.3.0-30.33838b0f78f1fe9052cf9a00e9761c9dc097a63c"
+  checksum: 3f1c233fd1e2306daa0a442477743d3fe96fe25d368b81be21da2e5c826c50667055adb2b9e7d9c71e9e07505d769dda9a7a3e11765aba932ee74c27e6b670f3
+  languageName: node
+  linkType: hard
+
 "@protobufjs/aspromise@npm:^1.1.1, @protobufjs/aspromise@npm:^1.1.2":
   version: 1.1.2
   resolution: "@protobufjs/aspromise@npm:1.1.2"
@@ -5308,6 +5336,18 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
+"prisma@npm:^3.3.0":
+  version: 3.3.0
+  resolution: "prisma@npm:3.3.0"
+  dependencies:
+    "@prisma/engines": 3.3.0-30.33838b0f78f1fe9052cf9a00e9761c9dc097a63c
+  bin:
+    prisma: build/index.js
+    prisma2: build/index.js
+  checksum: 68e4712d659ad660ff526d2ab6cd51b32e054d12e3229d07e73bb9cbf6e96ec81b46120a0df06637329d1ae41f3793291474b8c1c37106ae9b78f6b938171ab2
+  languageName: node
+  linkType: hard
+
 "process-nextick-args@npm:~2.0.0":
   version: 2.0.1
   resolution: "process-nextick-args@npm:2.0.1"
@@ -5782,11 +5822,13 @@ fsevents@~2.3.2:
     "@graphql-tools/load-files": ^6.5.1
     "@graphql-tools/merge": ^8.1.2
     "@graphql-tools/schema": ^8.2.0
+    "@prisma/client": ^3.3.0
     apollo-server-core: ^3.4.0
     apollo-server-express: ^3.4.0
     express: ^4.17.1
     graphql: ^15.6.1
     nodemon: ^2.0.13
+    prisma: ^3.3.0
     ts-node: ^10.3.0
     typescript: ^4.4.4
   languageName: unknown
