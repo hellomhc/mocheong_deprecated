@@ -8,5 +8,10 @@ datasource db {
 }
 
 model User {
-  id Int @id @default(autoincrement())
+  id           Int      @id @default(autoincrement())
+  name         String   @unique
+  password     String
+  tokenVersion Int      @default(0) @map("token_version")
+  createdAt    DateTime @default(now()) @map("created_at")
+  updatedAt    DateTime @updatedAt @map("updated_at")
 }
