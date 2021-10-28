@@ -6,6 +6,18 @@ type User implements Node {
   ID of the user.
   """
   id: ID!
+  """
+  The user's public profile name.
+  """
+  name: String!
+  """
+  Identifies the date and time when the user was created.
+  """
+  createdAt: DateTime!
+  """
+  Identifies the date and time when the user was last updated.
+  """
+  updatedAt: DateTime!
 }
 
 type Query {
