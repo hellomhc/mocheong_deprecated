@@ -20,6 +20,28 @@ type User implements Node {
   updatedAt: DateTime!
 }
 
+type SignUpPayload {
+  """
+  A user is an individual's account on Mocheong
+  """
+  user: User!
+  """
+  Access token for user authentication
+  """
+  accessToken: String!
+}
+
+input SignUpInput {
+  """
+  The user's public profile name.
+  """
+  username: String!
+  """
+  The user's password.
+  """
+  password: String!
+}
+
 type Query {
   """
   Fetches a user given its ID.
@@ -30,4 +52,11 @@ type Query {
     """
     id: ID!
   ): User
+}
+
+type Mutation {
+  """
+  Create a new user account.
+  """
+  signUp(input: SignUpInput!): SignUpPayload!
 }
